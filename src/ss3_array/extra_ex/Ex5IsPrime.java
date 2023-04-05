@@ -2,7 +2,7 @@ package ss3_array.extra_ex;
 
 import java.util.Scanner;
 
-public class Ex5Isprime {
+public class Ex5IsPrime {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập vào số cần kiểm tra");
