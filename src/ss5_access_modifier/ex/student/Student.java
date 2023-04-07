@@ -3,12 +3,15 @@ package ss5_access_modifier.ex.student;
 public class Student {
     private String name = "John";
     private String classes = "C02";
-    Student(){
+
+    Student() {
     }
-    protected void setName(String name){
+
+    protected void setName(String name) {
         this.name = name;
     }
-    protected void setClasses(String classes){
+
+    protected void setClasses(String classes) {
         this.classes = classes;
     }
 

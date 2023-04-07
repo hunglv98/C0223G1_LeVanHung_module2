@@ -1,5 +1,7 @@
 package ss5_access_modifier.ex.student;
+
 import java.util.Scanner;
+
 public class TestStudent {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
