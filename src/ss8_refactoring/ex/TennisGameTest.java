@@ -1,4 +1,4 @@
-package ss9_refactoring.ex;
+package ss8_refactoring.ex;
 
 public class TennisGameTest {
     public static void main(String[] args) {

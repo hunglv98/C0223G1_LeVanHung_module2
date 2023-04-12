@@ -1,4 +1,4 @@
-package ss9_refactoring.ex;
+package ss8_refactoring.ex;
 
 public class TennisGame {
     public TennisGame() {
