@@ -1,4 +1,4 @@
-package ss10_arrayList.ex.myList;
+package ss10_arrayList.ex.my_list;
 
 public class testMyList {
     public static void main(String[] args) {

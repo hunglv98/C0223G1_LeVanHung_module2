@@ -1,6 +1,5 @@
-package ss10_arrayList.ex.myList;
+package ss10_arrayList.ex.my_list;
 
-import javax.xml.bind.Element;
 import java.util.Arrays;
 
 public class MyList<E> {
