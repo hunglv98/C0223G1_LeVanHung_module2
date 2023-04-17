@@ -1,7 +1,6 @@
-package ss10_arrayList.ex.managementCodeGym.view;
+package ss10_arrayList.ex.management_codegym.view;
 
-import ss10_arrayList.ex.managementCodeGym.controller.StudentController;
-import ss10_arrayList.ex.managementCodeGym.service.StudentService;
+import ss10_arrayList.ex.management_codegym.controller.StudentController;
 
 public class CodeGymManagement {
     public static void main(String[] args) {

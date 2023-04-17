@@ -1,6 +1,4 @@
-package ss10_arrayList.ex.managementCodeGym.model;
-
-import ss10_arrayList.ex.managementCodeGym.model.Student;
+package ss10_arrayList.ex.management_codegym.model;
 
 public class Teacher extends Person {
     private String speciality;
@@ -28,6 +26,10 @@ public class Teacher extends Person {
     @Override
     public String toString() {
         return "Teacher{" +
+                "id=" + getId() + '\'' +
+                ", name=" + getName() +
+                ", date of birth= " + getDateOfBirth() + '\'' +
+                ", gender= " + getGender() +
                 "speciality='" + speciality + '\'' +
                 '}';
     }

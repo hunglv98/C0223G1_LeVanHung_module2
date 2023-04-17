@@ -1,6 +1,4 @@
-package ss10_arrayList.ex.managementCodeGym.model;
-
-import ss10_arrayList.ex.managementCodeGym.model.Person;
+package ss10_arrayList.ex.management_codegym.model;
 
 public class Student extends Person {
     private String className;

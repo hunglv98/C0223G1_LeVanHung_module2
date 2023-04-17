@@ -1,4 +1,4 @@
-package ss10_arrayList.ex.managementCodeGym.service;
+package ss10_arrayList.ex.management_codegym.service;
 
 public interface IStudentService {
     void displayStudentList();

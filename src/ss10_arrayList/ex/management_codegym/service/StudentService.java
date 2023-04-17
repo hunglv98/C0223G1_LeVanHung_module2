@@ -1,7 +1,7 @@
-package ss10_arrayList.ex.managementCodeGym.service;
+package ss10_arrayList.ex.management_codegym.service;
 
-import ss10_arrayList.ex.managementCodeGym.model.Student;
-import ss10_arrayList.ex.managementCodeGym.repository.StudentRepository;
+import ss10_arrayList.ex.management_codegym.model.Student;
+import ss10_arrayList.ex.management_codegym.repository.StudentRepository;
 
 import java.util.List;
 import java.util.Scanner;

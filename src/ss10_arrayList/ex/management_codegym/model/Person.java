@@ -1,4 +1,4 @@
-package ss10_arrayList.ex.managementCodeGym.model;
+package ss10_arrayList.ex.management_codegym.model;
 
 public class Person {
     private String id;

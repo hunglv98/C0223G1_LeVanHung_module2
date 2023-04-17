@@ -1,6 +1,6 @@
-package ss10_arrayList.ex.managementCodeGym.repository;
+package ss10_arrayList.ex.management_codegym.repository;
 
-import ss10_arrayList.ex.managementCodeGym.model.Student;
+import ss10_arrayList.ex.management_codegym.model.Student;
 
 import java.util.List;
 
