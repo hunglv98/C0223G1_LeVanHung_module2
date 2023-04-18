@@ -28,8 +28,9 @@ public class ProductService implements IProductService {
             System.out.println("Nhập vào tên sản phẩm");
             String name = sc.nextLine();
             System.out.println("Nhập vào giá");
-            int price = Integer.parseInt(sc.nextLine());
-            productRepo.editProduct(input, id, name, price);
+            double price = Double.parseDouble(sc.nextLine());
+            Product p = new Product(id, price, name);
+            productRepo.editProduct(p, input);
         } else System.out.println("Không tìm thấy Id này");
     }
 
@@ -55,7 +56,7 @@ public class ProductService implements IProductService {
         System.out.println("Mời nhập vào name");
         String name = sc.nextLine();
         System.out.println("Mời nhập vào giá");
-        int price = Integer.parseInt(sc.nextLine());
+        double price = Double.parseDouble(sc.nextLine());
         Product product = new Product(id, price, name);
         productRepo.addProduct(product);
         System.out.println("Đã thêm thành công " + product.getName());

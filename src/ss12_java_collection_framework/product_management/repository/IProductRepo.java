@@ -9,7 +9,7 @@ public interface IProductRepo {
 
     void addProduct(Product product);
 
-    void editProduct(String input, String id, String name, int price);
+    void editProduct(Product product, String input);
 
     boolean checkProduct(String id);
 

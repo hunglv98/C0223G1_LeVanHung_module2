@@ -29,16 +29,9 @@ public class ProductRepo implements IProductRepo {
     }
 
     @Override
-    public void editProduct(String input, String id, String name, int price) {
-        for (Product p : products) {
-            if (p.getId().equals(input)) {
-                p.setId(id);
-                p.setName(name);
-                p.setPrice(price);
-                System.out.println("Sửa thành công");
-                break;
-            }
-        }
+    public void editProduct(Product product, String input) {
+        deleteProduct(input);
+        addProduct(product);
     }
 
     @Override

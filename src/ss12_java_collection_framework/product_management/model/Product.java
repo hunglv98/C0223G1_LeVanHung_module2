@@ -2,13 +2,13 @@ package ss12_java_collection_framework.product_management.model;
 
 public class Product {
     private String id;
-    private int price;
+    private double price;
     private String name;
 
     public Product() {
     }
 
-    public Product(String id, int price, String name) {
+    public Product(String id, double price, String name) {
         this.id = id;
         this.price = price;
         this.name = name;
@@ -22,11 +22,11 @@ public class Product {
         this.id = id;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
