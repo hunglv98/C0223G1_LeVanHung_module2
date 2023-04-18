@@ -3,7 +3,7 @@ package ss13_search.ex;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class LongestArray {
+public class LongestString {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Nhập chuỗi: ");
