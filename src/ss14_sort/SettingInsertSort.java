@@ -15,7 +15,7 @@ public class SettingInsertSort {
             x = array[i];
             pos = i;
             while (pos > 0 && x < array[pos - 1]) {
-                array[pos] = array[pos - 1]; // đổi chỗ
+                array[pos] = array[pos - 1];
                 pos--;
             }
             array[pos] = x;
