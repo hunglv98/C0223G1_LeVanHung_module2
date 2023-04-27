@@ -1,8 +1,11 @@
 package case_study.controller;
 
+import case_study.service.EmployeeService;
+
 import java.util.Scanner;
 
 public class EmployeeManagement {
+    private EmployeeService employeeService = new EmployeeService();
     public void showEmployeeMenu() {
         FuramaController furamaController = new FuramaController();
         Scanner sc = new Scanner(System.in);
@@ -26,10 +29,13 @@ public class EmployeeManagement {
             }
             switch (input) {
                 case 1:
+                    employeeService.showList();
                     break;
                 case 2:
+                    employeeService.add();
                     break;
                 case 3:
+                    employeeService.edit();
                     break;
                 case 4:
                     furamaController.showMainMenu();

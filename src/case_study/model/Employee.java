@@ -14,7 +14,7 @@ public class Employee extends Person {
         this.wage = wage;
     }
 
-    public Employee(String id, String name, String dateOfBirth, String gender, double identifyNumber, double phoneNumber, String email, Academy academy, Position position, String wage) {
+    public Employee(String id, String name, String dateOfBirth, String gender, String identifyNumber, String phoneNumber, String email, Academy academy, Position position, String wage) {
         super(id, name, dateOfBirth, gender, identifyNumber, phoneNumber, email);
         this.academy = academy;
         this.position = position;
@@ -47,11 +47,16 @@ public class Employee extends Person {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "Employee{" + super.toString() +
                 "academy=" + academy +
                 ", position=" + position +
                 ", wage='" + wage + '\'' +
                 '}';
+    }
+
+    //    public Employee(String id, String name, String dateOfBirth, String gender, double identifyNumber, double phoneNumber, String email, Academy academy, Position position, String wage)
+    public String writeCsv() {
+        return getId() + "," + getName() + "," + getDateOfBirth() + "," + getGender() + "," + getIdentifyNumber() + "," + getPhoneNumber() + "," + getEmail() + "," + this.academy + "," + this.position + "," + this.wage;
     }
 }
 
