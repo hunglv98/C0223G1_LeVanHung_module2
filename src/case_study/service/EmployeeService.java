@@ -1,7 +1,7 @@
 package case_study.service;
 
 import case_study.model.Academy;
-import case_study.model.Employee;
+import case_study.model.person.Employee;
 import case_study.model.Position;
 import case_study.repository.EmployeeRepository;
 import case_study.validate.ValidateEmployee;

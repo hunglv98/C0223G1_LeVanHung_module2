@@ -1,4 +1,7 @@
-package case_study.model;
+package case_study.model.person;
+
+import case_study.model.CustomerType;
+import case_study.model.person.Person;
 
 public class Customer extends Person {
     private CustomerType customerType;
@@ -36,9 +39,12 @@ public class Customer extends Person {
 
     @Override
     public String toString() {
-        return "Customer{" +
+        return "Customer{" + super.toString()+
                 "customerType=" + customerType +
                 ", address='" + address + '\'' +
                 '}';
+    }
+    public String writeCsv() {
+        return getId() + "," + getName() + "," + getDateOfBirth() + "," + getGender() + "," + getIdentifyNumber() + "," + getPhoneNumber() + "," + getEmail() + "," + this.customerType + "," + this.address;
     }
 }

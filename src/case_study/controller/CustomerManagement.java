@@ -1,8 +1,11 @@
 package case_study.controller;
 
+import case_study.service.CustomerService;
+
 import java.util.Scanner;
 
 public class CustomerManagement {
+    private CustomerService customerService = new CustomerService();
     public void showCustomerMenu() {
         FuramaController furamaController = new FuramaController();
         Scanner sc = new Scanner(System.in);
@@ -26,10 +29,13 @@ public class CustomerManagement {
             }
             switch (input) {
                 case 1:
+                    customerService.showList();
                     break;
                 case 2:
+                    customerService.add();
                     break;
                 case 3:
+                    customerService.edit();
                     break;
                 case 4:
                     furamaController.showMainMenu();

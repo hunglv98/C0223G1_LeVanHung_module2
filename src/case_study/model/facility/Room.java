@@ -1,4 +1,6 @@
-package case_study.model;
+package case_study.model.facility;
+
+import case_study.model.facility.Facility;
 
 public class Room extends Facility {
     private String freeService;
@@ -25,7 +27,7 @@ public class Room extends Facility {
 
     @Override
     public String toString() {
-        return "Room{" +
+        return "Room{" + super.toString() +
                 "freeService='" + freeService + '\'' +
                 '}';
     }

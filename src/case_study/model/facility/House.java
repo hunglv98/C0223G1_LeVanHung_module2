@@ -1,24 +1,23 @@
-package case_study.model;
+package case_study.model.facility;
 
-public class Villa extends Facility {
+import case_study.model.facility.Facility;
+
+public class House extends Facility {
     private String standardRoom;
-    private double poolArea;
     private int numberFloor;
 
-    public Villa(String standardRoom, double poolArea, int numberFloor) {
+    public House(String standardRoom, int numberFloor) {
         this.standardRoom = standardRoom;
-        this.poolArea = poolArea;
         this.numberFloor = numberFloor;
     }
 
-    public Villa(String id, String name, double usedArea, double rentCost, int numberPeople, String typeOfRent, String standardRoom, double poolArea, int numberFloor) {
+    public House(String id, String name, double usedArea, double rentCost, int numberPeople, String typeOfRent, String standardRoom, int numberFloor) {
         super(id, name, usedArea, rentCost, numberPeople, typeOfRent);
         this.standardRoom = standardRoom;
-        this.poolArea = poolArea;
         this.numberFloor = numberFloor;
     }
 
-    public Villa() {
+    public House() {
     }
 
     public String getStandardRoom() {
@@ -27,14 +26,6 @@ public class Villa extends Facility {
 
     public void setStandardRoom(String standardRoom) {
         this.standardRoom = standardRoom;
-    }
-
-    public double getPoolArea() {
-        return poolArea;
-    }
-
-    public void setPoolArea(double poolArea) {
-        this.poolArea = poolArea;
     }
 
     public int getNumberFloor() {
@@ -47,9 +38,8 @@ public class Villa extends Facility {
 
     @Override
     public String toString() {
-        return "Villa{" +
+        return "House{" + super.toString() +
                 "standardRoom='" + standardRoom + '\'' +
-                ", poolArea=" + poolArea +
                 ", numberFloor=" + numberFloor +
                 '}';
     }

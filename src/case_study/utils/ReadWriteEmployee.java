@@ -1,7 +1,7 @@
-package case_study.common;
+package case_study.utils;
 
 import case_study.model.Academy;
-import case_study.model.Employee;
+import case_study.model.person.Employee;
 import case_study.model.Position;
 
 import java.io.*;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadWriteEmployee {
-    public static String PATH_FILE = "src/case_study/data/employee.csv";
+    public static String PATH_FILE = "src/case_study/data/Employee.csv";
     public static void write(List<Employee> list){
         File file = new File(PATH_FILE);
         try {

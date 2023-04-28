@@ -1,4 +1,8 @@
-package case_study.model;
+package case_study.model.person;
+
+import case_study.model.Academy;
+import case_study.model.Position;
+import case_study.model.person.Person;
 
 public class Employee extends Person {
     private Academy academy;

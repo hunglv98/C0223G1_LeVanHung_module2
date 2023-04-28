@@ -1,7 +1,7 @@
 package case_study.repository;
 
-import case_study.common.ReadWriteEmployee;
-import case_study.model.Employee;
+import case_study.utils.ReadWriteEmployee;
+import case_study.model.person.Employee;
 
 import java.util.List;
 

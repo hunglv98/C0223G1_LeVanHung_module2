@@ -1,6 +1,6 @@
 package case_study.repository;
 
-import case_study.model.Employee;
+import case_study.model.person.Employee;
 
 import java.util.List;
 
