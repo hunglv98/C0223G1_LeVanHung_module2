@@ -6,6 +6,7 @@ public class PromotionManagement {
     public void showPromotionMenu() {
         FuramaController furamaController = new FuramaController();
         Scanner sc = new Scanner(System.in);
+        boolean flag = true;
         do {
             System.out.print("-----Promotion Management-----\n" +
                     "1. Display list customers use service \n" +
@@ -29,10 +30,11 @@ public class PromotionManagement {
                 case 2:
                     break;
                 case 3:
-                    furamaController.showMainMenu();
+                    flag = false;
+                   break;
                 default:
                     break;
             }
-        } while (true);
+        } while (flag);
     }
 }

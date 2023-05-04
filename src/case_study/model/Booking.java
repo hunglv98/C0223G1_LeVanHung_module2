@@ -1,5 +1,7 @@
 package case_study.model;
 
+import java.util.Date;
+
 public class Booking {
     private String idBooking;
     private String dateBooking;

@@ -1,11 +1,15 @@
 package case_study.controller;
 
+import case_study.service.BookingService;
+
 import java.util.Scanner;
 
 public class BookingManagement {
+    private BookingService bookingService = new BookingService();
     public void showBookingMenu() {
         FuramaController furamaController = new FuramaController();
         Scanner sc = new Scanner(System.in);
+        boolean flag = true;
         do {
             System.out.print("-----Booking Management-----\n" +
                     "1. Add new booking \n" +
@@ -28,8 +32,10 @@ public class BookingManagement {
             }
             switch (input) {
                 case 1:
+                    bookingService.add();
                     break;
                 case 2:
+                    bookingService.showList();
                     break;
                 case 3:
                     break;
@@ -38,10 +44,11 @@ public class BookingManagement {
                 case 5:
                     break;
                 case 6:
-                    furamaController.showMainMenu();
+                    flag = false;
+                    break;
                 default:
                     break;
             }
-        } while (true);
+        } while (flag);
     }
 }

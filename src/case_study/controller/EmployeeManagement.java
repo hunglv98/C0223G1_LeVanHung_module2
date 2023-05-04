@@ -9,6 +9,7 @@ public class EmployeeManagement {
     public void showEmployeeMenu() {
         FuramaController furamaController = new FuramaController();
         Scanner sc = new Scanner(System.in);
+        boolean flag = true;
         do {
             System.out.print("-----Employee Management-----\n" +
                     "1. Display list employees \n" +
@@ -38,10 +39,11 @@ public class EmployeeManagement {
                     employeeService.edit();
                     break;
                 case 4:
-                    furamaController.showMainMenu();
+                    flag = false;
+                    break;
                 default:
                     break;
             }
-        } while (true);
+        } while (flag);
     }
 }

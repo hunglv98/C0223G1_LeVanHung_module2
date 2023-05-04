@@ -9,6 +9,7 @@ public class CustomerManagement {
     public void showCustomerMenu() {
         FuramaController furamaController = new FuramaController();
         Scanner sc = new Scanner(System.in);
+        boolean flag = true;
         do {
             System.out.print("-----Customer Management-----\n" +
                     "1. Display list customers \n" +
@@ -38,10 +39,11 @@ public class CustomerManagement {
                     customerService.edit();
                     break;
                 case 4:
-                    furamaController.showMainMenu();
+                    flag = false;
+                    break;
                 default:
                     break;
             }
-        } while (true);
+        } while (flag);
     }
 }

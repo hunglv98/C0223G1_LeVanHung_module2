@@ -6,6 +6,7 @@ import java.util.LinkedHashMap;
 
 public interface IFacilityRepository extends IRepository {
     void getList();
-    void add(Facility facility,String id);
+    void add(Facility facility);
     void showMaintainList();
+    boolean checkId(String id);
 }

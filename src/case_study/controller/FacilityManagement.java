@@ -13,6 +13,7 @@ public class FacilityManagement {
     public void showFacilityMenu() {
         FuramaController furamaController = new FuramaController();
         Scanner sc = new Scanner(System.in);
+        boolean flag1 = true;
         do {
             System.out.print("-----Facility Management-----\n" +
                     "1. Display list facilities \n" +
@@ -47,66 +48,69 @@ public class FacilityManagement {
                         switch (input1){
                             case 1:
 //                                public Villa(String id, String name, double usedArea, double rentCost, int numberPeople, String typeOfRent, String standardRoom, double poolArea, int numberFloor)
-                                System.out.println("Cho nhập id");
-                                String id = sc.nextLine();
-                                System.out.println("Nhập tên");
-                                String name = sc.nextLine();
-                                System.out.println("Số tiền thuê");
-                                double usedArea = Double.parseDouble(sc.nextLine());
-                                System.out.println("Nhập số người");
-                                double rentCost = Double.parseDouble(sc.nextLine()) ;
-                                System.out.println("Nhập diện tích sử dụng");
-                                int numberPeople = Integer.parseInt(sc.nextLine());
-                                System.out.println("Nhâp loại thuê");
-                                String typeOfRent = sc.nextLine();
-                                System.out.println("Nhập loại phòng");
-                                String standard = sc.nextLine();
-                                System.out.println("Nhập diện tích hồ bơi");
-                                double poolArea = Double.parseDouble(sc.nextLine());
-                                System.out.println("Nhập số tầng");
-                                int numberFloor = Integer.parseInt(sc.nextLine());
-                                Villa villa = new Villa(id,name,usedArea,rentCost,numberPeople,typeOfRent,standard,poolArea,numberFloor);
-                                facilityService.add(villa,id);
+//                                System.out.println("Cho nhập id");
+//                                String id = sc.nextLine();
+//                                System.out.println("Nhập tên");
+//                                String name = sc.nextLine();
+//                                System.out.println("Số tiền thuê");
+//                                double usedArea = Double.parseDouble(sc.nextLine());
+//                                System.out.println("Nhập số người");
+//                                double rentCost = Double.parseDouble(sc.nextLine()) ;
+//                                System.out.println("Nhập diện tích sử dụng");
+//                                int numberPeople = Integer.parseInt(sc.nextLine());
+//                                System.out.println("Nhâp loại thuê");
+//                                String typeOfRent = sc.nextLine();
+//                                System.out.println("Nhập loại phòng");
+//                                String standard = sc.nextLine();
+//                                System.out.println("Nhập diện tích hồ bơi");
+//                                double poolArea = Double.parseDouble(sc.nextLine());
+//                                System.out.println("Nhập số tầng");
+//                                int numberFloor = Integer.parseInt(sc.nextLine());
+//                                Villa villa = new Villa(id,name,usedArea,rentCost,numberPeople,typeOfRent,standard,poolArea,numberFloor);
+//                                facilityService.add(villa,id);
+                                facilityService.addVilla();
                                 break;
                             case 2:
 //                                public House(String id, String name, double usedArea, double rentCost, int numberPeople, String typeOfRent, String standardRoom, int numberFloor)
-                                System.out.println("Cho nhập id");
-                                String id1 = sc.nextLine();
-                                System.out.println("Nhập tên");
-                                String name1 = sc.nextLine();
-                                System.out.println("Nhập diện tích sử dụng");
-                                double usedArea1 = Double.parseDouble(sc.nextLine());
-                                System.out.println("Số tiền thuê");
-                                double rentCost1 = Double.parseDouble(sc.nextLine()) ;
-                                System.out.println("Nhập số người");
-                                int numberPeople1 = Integer.parseInt(sc.nextLine());
-                                System.out.println("Nhâp loại thuê");
-                                String typeOfRent1 = sc.nextLine();
-                                System.out.println("Nhập tiêu chuẩn phòng");
-                                String standardRoom = sc.nextLine();
-                                System.out.println("Nhập số tầng");
-                                int numberFloor1 = Integer.parseInt(sc.nextLine());
-                                House house = new House(id1,name1,usedArea1,rentCost1,numberPeople1,typeOfRent1,standardRoom,numberFloor1);
-                                facilityService.add(house,id1);
+//                                System.out.println("Cho nhập id");
+//                                String id1 = sc.nextLine();
+//                                System.out.println("Nhập tên");
+//                                String name1 = sc.nextLine();
+//                                System.out.println("Nhập diện tích sử dụng");
+//                                double usedArea1 = Double.parseDouble(sc.nextLine());
+//                                System.out.println("Số tiền thuê");
+//                                double rentCost1 = Double.parseDouble(sc.nextLine()) ;
+//                                System.out.println("Nhập số người");
+//                                int numberPeople1 = Integer.parseInt(sc.nextLine());
+//                                System.out.println("Nhâp loại thuê");
+//                                String typeOfRent1 = sc.nextLine();
+//                                System.out.println("Nhập tiêu chuẩn phòng");
+//                                String standardRoom = sc.nextLine();
+//                                System.out.println("Nhập số tầng");
+//                                int numberFloor1 = Integer.parseInt(sc.nextLine());
+//                                House house = new House(id1,name1,usedArea1,rentCost1,numberPeople1,typeOfRent1,standardRoom,numberFloor1);
+//                                facilityService.add(house,id1);
+                                facilityService.addHouse();
                                 break;
                             case 3:
-//                                public Room(String id, String name, double usedArea, double rentCost, int numberPeople, String typeOfRent, String freeService)
-                                System.out.println("Cho nhập id");
-                                String id2 = sc.nextLine();
-                                System.out.println("Nhập tên");
-                                String name2 = sc.nextLine();
-                                System.out.println("Nhập diện tích sử dụng");
-                                double usedArea2 = Double.parseDouble(sc.nextLine());
-                                System.out.println("Số tiền thuê");
-                                double rentCost2 = Double.parseDouble(sc.nextLine()) ;
-                                System.out.println("Nhập số người");
-                                int numberPeople2 = Integer.parseInt(sc.nextLine());
-                                System.out.println("Nhâp loại thuê");
-                                String typeOfRent2 = sc.nextLine();
-                                System.out.println("Nhập dịch vụ miễn phí đi kèm");
-                                String freeService = sc.nextLine();
-                                Room room = new Room(id2,name2,usedArea2,rentCost2,numberPeople2,typeOfRent2,freeService);
-                                facilityService.add(room,id2);
+////                                public Room(String id, String name, double usedArea, double rentCost, int numberPeople, String typeOfRent, String freeService)
+//                                System.out.println("Cho nhập id");
+//                                String id2 = sc.nextLine();
+//                                System.out.println("Nhập tên");
+//                                String name2 = sc.nextLine();
+//                                System.out.println("Nhập diện tích sử dụng");
+//                                double usedArea2 = Double.parseDouble(sc.nextLine());
+//                                System.out.println("Số tiền thuê");
+//                                double rentCost2 = Double.parseDouble(sc.nextLine()) ;
+//                                System.out.println("Nhập số người");
+//                                int numberPeople2 = Integer.parseInt(sc.nextLine());
+//                                System.out.println("Nhâp loại thuê");
+//                                String typeOfRent2 = sc.nextLine();
+//                                System.out.println("Nhập dịch vụ miễn phí đi kèm");
+//                                String freeService = sc.nextLine();
+//                                Room room = new Room(id2,name2,usedArea2,rentCost2,numberPeople2,typeOfRent2,freeService);
+//                                facilityService.add(room,id2);
+                                facilityService.addRoom();
                                 break;
                             case 4:
                                 flag = false;
@@ -120,10 +124,11 @@ public class FacilityManagement {
                     facilityService.showMaintainList();
                     break;
                 case 4:
-                    furamaController.showMainMenu();
+                    flag1 = false;
+                    break;
                 default:
                     break;
             }
-        } while (true);
+        } while (flag1);
     }
 }

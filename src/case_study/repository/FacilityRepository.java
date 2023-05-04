@@ -5,7 +5,6 @@ import case_study.model.facility.House;
 import case_study.model.facility.Room;
 import case_study.model.facility.Villa;
 
-import java.awt.*;
 import java.util.LinkedHashMap;
 import java.util.Set;
 
@@ -13,14 +12,11 @@ public class FacilityRepository implements IFacilityRepository {
     private static LinkedHashMap<Facility, Integer> linkedHashMap = new LinkedHashMap<>();
 
     static {
-        House house = new House("2", "1", 1, 1, 1, "1", "1", 1);
-//        House(String id, String name, double usedArea, double rentCost, int numberPeople, String typeOfRent, String standardRoom, int numberFloor)
-        linkedHashMap.put(house, 1);
-//        Villa(String id, String name, double usedArea, double rentCost, int numberPeople, String typeOfRent, String standardRoom, double poolArea, int numberFloor)
-        Villa villa = new Villa("1", "1", 1, 1, 1, "1", "1", 1, 1);
+        House house = new House("SVHO-1234", "House", 1, 1, 1, "Normal", "Normal", 1);
+        linkedHashMap.put(house, 4);
+        Villa villa = new Villa("SVVL-1234", "Villa", 1, 1, 1, "Normal", "Normal", 1, 1);
         linkedHashMap.put(villa, 1);
-        Room room = new Room("3", "1", 1, 1, 1, "1", "1");
-//        Room(String id, String name, double usedArea, double rentCost, int numberPeople, String typeOfRent, String freeService)
+        Room room = new Room("SVRO-1234", "Room", 1, 1, 1, "Normal", "Buffet");
         linkedHashMap.put(room, 1);
     }
 
@@ -33,40 +29,39 @@ public class FacilityRepository implements IFacilityRepository {
     }
 
     @Override
-    public void add(Facility facility, String id) {
-////        if (linkedHashMap.containsKey(facility)) {
-////            linkedHashMap.put(facility,linkedHashMap.get(facility)+1);
-////        }else linkedHashMap.put(facility,1);
-//        boolean flag = false;
-//        Set<Facility> keySet = linkedHashMap.keySet();
-////        if (facility instanceof Villa) {
-//            for (Facility f : keySet) {
-//                if (f.getId().equals(id)) {
-////                    linkedHashMap.put(facility, linkedHashMap.get(facility) + 1);
-////                } else linkedHashMap.put(facility, 1);
-////                    System.out.println(true);
-////                    System.out.println(f);
-//                    flag = true;
-//                }
-//            }
-////        }
-//        if(flag){
-//            linkedHashMap.put(facility,linkedHashMap.get(facility)+1);
-//        }else linkedHashMap.put(facility,1);
-//        System.out.println("Thêm thành công");
-        Set<Facility> keySet = linkedHashMap.keySet();
-        for (Facility f : keySet) {
-            if (f.getId().equals(id)) {
-                System.out.println(true);
-
-            }
-        }
+    public void add(Facility facility) {
+        linkedHashMap.put(facility, 1);
     }
 
 
     @Override
     public void showMaintainList() {
+        for (Facility f : linkedHashMap.keySet()) {
+            if (linkedHashMap.get(f) == 5) {
+                System.out.println(f);
+            }
+        }
+    }
 
+    @Override
+    public boolean checkId(String id) {
+        Set<Facility> keySet = linkedHashMap.keySet();
+        for (Facility f : keySet) {
+            if (f.getId().equals(id)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void updateBooking(String str){
+        Set<Facility> keySet = linkedHashMap.keySet();
+        for (Facility f: keySet) {
+            if(f.getId().equals(str)){
+                linkedHashMap.put(f,linkedHashMap.get(f)+1);
+                break;
+            }
+        }
     }
 }
 
