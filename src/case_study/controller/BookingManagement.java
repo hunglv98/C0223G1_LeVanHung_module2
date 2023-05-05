@@ -1,11 +1,13 @@
 package case_study.controller;
 
 import case_study.service.BookingService;
+import case_study.service.ContractService;
 
 import java.util.Scanner;
 
 public class BookingManagement {
     private BookingService bookingService = new BookingService();
+    private ContractService contractService = new ContractService();
     public void showBookingMenu() {
         FuramaController furamaController = new FuramaController();
         Scanner sc = new Scanner(System.in);
@@ -38,10 +40,13 @@ public class BookingManagement {
                     bookingService.showList();
                     break;
                 case 3:
+                    contractService.add();
                     break;
                 case 4:
+                    contractService.showList();
                     break;
                 case 5:
+                    contractService.edit();
                     break;
                 case 6:
                     flag = false;
